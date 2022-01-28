@@ -1,0 +1,78 @@
+.page-wrapper {
+  max-width: 900px;
+  margin: 20px auto;
+  position: static;
+}
+
+.page-title-background {
+  height: 300px;
+  overflow: hidden;
+  background: black;
+}
+
+.page-title-content {
+  text-align: center;
+  position: relative;
+  top: -300px;
+}
+
+.page-movie-header-title {
+  font-size: 40px;
+  color: #fff;
+  font-weight: 700;
+  line-height: 70px;
+  white-space: nowrap;
+}
+
+.page-movie-header-rate {
+  color: #e6c92a;
+  font-weight: 700;
+  font-size: 25px;
+}
+
+.page-movie-header-genre {
+  font-size: 25px;
+  color: #fff;
+  font-weight: 300;
+  line-height: 70px;
+  white-space: nowrap;
+}
+
+.details-form {
+  background: #28146e;
+  color: #fff;
+  text-align: left;
+  width: 60%;
+  position: absolute;
+  margin-top: -200px;
+  left: 20%;
+}
+
+.details-form-about-par {
+  padding: 20px 20px 0 20px;
+  margin-bottom: 0;
+  font-size: 20px;
+  color: #fff;
+  line-height: 50px;
+}
+
+.cont {
+  padding: 0 0 0 20px;
+  margin-bottom: 0;
+  font-size: 15px;
+  color: #fff;
+  line-height: 50px;
+}
+
+.cont role-cont {
+  display: inline-block;
+  white-space: pre-line;
+}
+
+.movie-poster {
+  margin-top: 5px;
+  width: calc(35% - 25px);
+  height: auto;
+  padding: 10px 10px 10px 20px;
+}
+/*# sourceMappingURL=detail-page.component.css.map */

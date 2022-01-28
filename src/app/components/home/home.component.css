@@ -1,0 +1,169 @@
+.filters {
+  max-width: 1200px;
+  margin: 10px auto;
+  padding-left: 10px;
+}
+
+::ng-deep .mat-form-field-infix {
+  background-color: #3f51b5;
+  border-top-left-radius: 5px;
+}
+
+::ng-deep .mat-select-value,
+::ng-deep .mat-select-arrow,
+::ng-deep .mat-form-field-hide-placeholder .mat-select-placeholder,
+::ng-deep .mat-form-field-appearance-legacy .mat-form-field-label {
+  color: #fff !important;
+  opacity: 1;
+}
+
+::ng-deep .mat-form-field-infix {
+  border-color: #fff !important;
+  border-top: none;
+  padding-left: 5px !important;
+}
+
+::ng-deep .mat-form-field-appearance-legacy .mat-form-field-label {
+  padding-left: 5px;
+}
+
+::ng-deep .mat-form-field-appearance-legacy .mat-form-field-underline {
+  background-color: #fff !important;
+}
+
+.movies {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+.movie {
+  width: 350px;
+  margin: 10px;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 5px;
+  background-color: #202020;
+  -webkit-box-shadow: 4px 3px 8px 0px grb(200 152 44);
+          box-shadow: 4px 3px 8px 0px grb(200 152 44);
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  cursor: pointer;
+}
+
+.movie:hover {
+  -webkit-box-shadow: 0 0 1em gold;
+          box-shadow: 0 0 1em gold;
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+}
+
+.movie-thumb-container {
+  background-color: #000;
+  position: relative;
+  height: 280px;
+  color: #fff;
+  text-align: center;
+}
+
+.movie-thumbnail {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  height: 280px;
+}
+
+.movie-dsecription {
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  height: 120px;
+}
+
+.movie-name {
+  color: #fff;
+  font-weight: 450;
+  font-size: 15px;
+  overflow-wrap: break-word;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.movie-average-rate {
+  color: #e6c92a;
+  font-weight: 650;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.pagination ::ng-deep .ngx-pagination .current {
+  background-color: #007bff !important;
+  border: 1px solid #007bff !important;
+  border-radius: 10px;
+  padding: 6px 12px !important;
+  z-index: 999999 !important;
+  position: relative;
+  font-size: 15px;
+}
+
+.pagination ::ng-deep .ngx-pagination {
+  margin-bottom: 0 !important;
+  font-size: 15px;
+}
+
+.pagination ::ng-deep .ngx-pagination li {
+  margin-right: -1px !important;
+  font-size: 15px;
+}
+
+.pagination ::ng-deep .ngx-pagination li.current {
+  background-color: #3f51b5 !important;
+  border: 1px solid #3f51b5 !important;
+  font-size: 15px;
+  padding: 6px 12px !important;
+  z-index: 999999 !important;
+  position: relative;
+}
+
+.pagination ::ng-deep .ngx-pagination li a:focus {
+  outline: none;
+  font-size: 15px;
+}
+
+.pagination ::ng-deep .ngx-pagination a, .ngx-pagination button {
+  color: #3f51b5 !important;
+  background-color: #fff !important;
+  border: 1px solid #fff !important;
+  padding: 6px 12px !important;
+  font-size: 15px;
+}
+
+.pagination ::ng-deep .ngx-pagination .disabled {
+  color: #6c757d !important;
+  pointer-events: none  !important;
+  cursor: auto  !important;
+  background-color: #fff  !important;
+  border: 1px solid #fff  !important;
+  padding: 6px 12px !important;
+  font-size: 15px;
+}
+/*# sourceMappingURL=home.component.css.map */

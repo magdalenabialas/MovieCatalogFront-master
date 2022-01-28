@@ -1,0 +1,75 @@
+.page-wrapper{
+    max-width: 900px;
+    margin: 20px auto;
+    position: static;
+}
+.page{
+        &-title-background{
+            height: 300px;
+            overflow: hidden;
+            background:rgb(0, 0, 0)
+        }
+        &-title-content{
+            text-align: center;
+            position: relative;
+            top: -300px;
+        }
+        &-movie-header{
+            &-title{
+                font-size: 40px;
+                color:#fff;
+                font-weight: 700;
+                line-height: 70px;
+                white-space: nowrap;
+            }
+            &-rate{
+                color: rgb(230, 201, 42);
+                font-weight: 700;
+                font-size: 25px;
+            }
+            &-genre{
+                font-size: 25px;
+                color:#fff;
+                font-weight: 300;
+                line-height: 70px;
+                white-space: nowrap;
+            }
+        }
+}
+
+.details-form{
+    background: rgb(40, 20, 110);
+    color:#fff;
+    text-align: left;
+    width: 60%;
+    position: absolute;
+    margin-top: -200px;
+    left: 20%;
+    &-about-par{
+        padding: 20px 20px 0 20px;
+        margin-bottom: 0;
+        font-size: 20px;
+        color:#fff;
+        line-height: 50px;
+    }
+}
+
+.cont{
+    padding: 0 0 0 20px;
+    margin-bottom: 0;
+    font-size: 15px;
+    color:#fff;
+    line-height: 50px;
+    role-cont{
+        display:inline-block;
+        white-space:pre-line;
+    }
+
+}
+
+.movie-poster{
+    margin-top: 5px;
+    width: calc(35% - 25px);
+    height: auto;
+    padding: 10px 10px 10px 20px;
+}

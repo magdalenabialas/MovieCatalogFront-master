@@ -1,0 +1,41 @@
+<app-search-bar (searchEvent)="filterMovies($event)" (resetEvent)="restartFilterMovies()"></app-search-bar>
+<div class="filters">
+    <mat-form-field>
+        <mat-label>Sort</mat-label>
+        <mat-select
+        panelClass="sort-select"
+        [(ngModel)]="sort"
+        (selectionChange)="sortMovie()"
+        >
+        <mat-option value="title A-Z">Title A-Z</mat-option>
+        <mat-option value="title Z-A">Title Z-A</mat-option>
+        <mat-option value="top rated">Highest rated</mat-option>
+        <mat-option value="low rated">Lowest rated</mat-option>
+        <mat-option value="earliest released">Earliest released</mat-option>
+        <mat-option value="latest released">Latest released</mat-option>
+        </mat-select>
+    </mat-form-field>
+  </div> 
+
+<div class="movies">
+  <ng-container *ngFor="let movie of movies | paginate: { itemsPerPage: 9, currentPage: p}">
+  <div class="movie" [routerLink]="'../movie/' + movie.idmovie">
+    <div class="movie-thumb-container">
+      <img
+        *ngIf="movie.poster_path"
+        src="{{movie.poster_path}}"
+        alt="thumbnail"
+        class="movie-thumbnail"
+      />
+    <p *ngIf="!movie.poster_path">No image</p>
+    </div>
+    <div class="movie-dsecription">
+      <p class="movie-average-rate">&#11088;&nbsp;{{movie.average_rate}}</p>
+      <p class="movie-name">{{movie.title}}</p>
+    </div>
+  </div>
+</ng-container>
+<div class="pagination"s>
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>
+</div>

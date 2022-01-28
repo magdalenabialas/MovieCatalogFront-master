@@ -1,0 +1,43 @@
+<div class ="page">
+    <div class="page-title-background">
+    </div>
+    <div class="page-title-content">
+        <div class="page-wrapper">
+            <div class="page-movie-header">
+                    <h1 class="page-movie-header-title">{{movie?.title}}</h1>
+                    <h2 class="page-movie-header-rate">&#11088;&nbsp;{{movie?.average_rate}}</h2>
+                    <h2 class="page-movie-header-genre">{{movie?.genres}}</h2>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="details-form">
+    <mat-tab-group mat-align-tabs="start" backgroundColor="primary">
+        <mat-tab label="Movie details">
+                <p class ="details-form-about-par">
+                <b>Description:</b> {{movie?.description}} <br><br>
+                <b>Director:</b> {{movie?.director}} <br> 
+                <b>Original language:</b> {{movie?.original_lang}} <br> 
+                <b>Relesae date:</b> {{movie?.release_date}} <br> 
+                <b>Number of votes:</b> {{movie?.vote_count}} <br><br> 
+                <b>Cast:</b><br> 
+                </p>
+                <div *ngFor="let actor of actors">
+                    <div class="cont">
+                            <div class="role-cont">{{actor.nameActor}} as {{actor.charactername}}</div>
+                    </div> 
+                </div> 
+        </mat-tab>
+        <mat-tab label="Posters">
+            <img
+                class="movie-poster"
+                [src]="movie?.poster_path"
+                alt="screenshot"
+            />
+        </mat-tab>
+    </mat-tab-group>
+</div>
+
+
+
