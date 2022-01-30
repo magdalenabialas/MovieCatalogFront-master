@@ -3,18 +3,31 @@
         <input
         class="search-input"
         type="text"
-        placeholder="Search movies!"
+        placeholder="Search movies by title!"
         [(ngModel)]="searchTerm"
         (keyup.enter)="search()"
         />
         <button (click)="search()" type="submit" class="search-button">Search</button>
         
-        <ul class="navbar-nav ml-auto" *ngIf="!isLoggedIn">
-                <li class="nav-item">
-                  <a href="/register" class="nav-link" routerLink="register">Sign Up</a>
+        <div class="navbar-not-logged-in">
+          <ul class="navbar-not-logged-in-ul" *ngIf="!isLoggedIn">
+                <li class="navbar-not-logged-in-list">
+                  <a href="/about" class="navbar-not-logged-in-item"><b>About</b></a>
                 </li>
-                <li class="nav-item">
-                  <a href="/login" class="nav-link" routerLink="login">Login</a>
+                <li class="navbar-not-logged-in-list">
+                  <a href="/register" class="navbar-not-logged-in-item" routerLink="register"><b>Sign Up</b></a>
+                </li>
+                <li class="navbar-not-logged-in-list">
+                  <a href="/login" class="navbar-not-logged-in-item" routerLink="login"><b>Login</b></a>
+                </li>
+          </ul>
+        </div>
+
+        <ul class="navbar-logged-in" *ngIf="isLoggedIn">
+                <li class="navbar-logged-in-list">
+                  <a href="/about" class="navbar-logged-in-item"><b>About</b></a>
+                <li class="navbar-logged-in-list">
+                  <a href class="navbar-logged-in-item" (click)="logout()"><b>LogOut</b></a>
                 </li>
               </ul>
 </div>  

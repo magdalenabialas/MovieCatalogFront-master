@@ -58,3 +58,64 @@
     text-decoration: none; 
     font-family: "Arial", sans-serif;
 }
+
+.logo{
+    margin-left: 10px;
+    color: rgb(187, 231, 25);
+    font-weight: 1000;
+    cursor: pointer;
+    text-decoration: none; 
+    font-family: "Arial", sans-serif;
+}
+
+.navbar-not-logged-in {
+    vertical-align: top;
+    width: 72%;
+}
+
+.navbar-not-logged-in-ul {
+    clear: both;
+    list-style-type: none;
+    position: static;
+    float: right;
+    
+}
+.navbar-not-logged-in-item{
+    margin-right: 10px;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none; 
+    font-family: "Arial", sans-serif;
+}
+
+.navbar-not-logged-in-list{
+    display:inline-block;
+    width: auto;
+}
+
+
+
+.navbar-logged-in {
+    vertical-align: top;
+    width: 72%;
+}
+
+.navbar-logged-in-ul {
+    clear: both;
+    list-style-type: none;
+    position: static;
+    float: right;
+    
+}
+.navbar-logged-in-item{
+    margin-right: 10px;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none; 
+    font-family: "Arial", sans-serif;
+}
+
+.navbar-logged-in-list{
+    display:inline-block;
+    width: auto;
+}

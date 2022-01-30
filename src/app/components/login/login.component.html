@@ -1,5 +1,5 @@
-<div class="col-md-12">
-    <div class="card card-container">
+<div class="login-form">
+    <div class="card-container">
       <img
         id="profile-img"
         src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"
@@ -13,7 +13,7 @@
         novalidate
       >
         <div class="form-group">
-          <label for="username">Username</label>
+          <label class="label" for="username">Username</label>
           <input
             type="text"
             class="form-control"
@@ -23,7 +23,7 @@
             #username="ngModel"
           />
           <div
-            class="alert alert-danger"
+            class="alert-danger"
             role="alert"
             *ngIf="username.errors && f.submitted"
           >
@@ -31,7 +31,7 @@
           </div>
         </div>
         <div class="form-group">
-          <label for="password">Password</label>
+          <label class="label" for="password">Password</label>
           <input
             type="password"
             class="form-control"
@@ -42,7 +42,7 @@
             #password="ngModel"
           />
           <div
-            class="alert alert-danger"
+            class="alert-danger"
             role="alert"
             *ngIf="password.errors && f.submitted"
           >
@@ -53,13 +53,13 @@
           </div>
         </div>
         <div class="form-group">
-          <button class="btn btn-primary btn-block">
+          <button class="button">
             Login
           </button>
         </div>
         <div class="form-group">
           <div
-            class="alert alert-danger"
+            class="alert-danger"
             role="alert"
             *ngIf="f.submitted && isLoginFailed"
           >
@@ -68,8 +68,8 @@
         </div>
       </form>
   
-      <div class="alert alert-success" *ngIf="isLoggedIn">
-        Logged in as {{ roles }}.
+      <div class="alert-success" *ngIf="isLoggedIn">
+        Logged in succesfully!
       </div>
     </div>
   </div>

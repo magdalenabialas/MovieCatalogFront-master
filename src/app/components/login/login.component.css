@@ -1,0 +1,62 @@
+.login-form {
+  margin-left: auto;
+  margin-right: auto;
+  width: 8em;
+  margin-top: 35px;
+  background: #400d81;
+  width: 400px;
+  height: 500px;
+  text-align: center;
+}
+
+.profile-img-card {
+  border-radius: 50%;
+  width: 40%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 6px 12px;
+  margin-bottom: 30px;
+}
+
+.label {
+  margin-bottom: 15px;
+  margin-top: 30px;
+  font-size: 15px;
+  color: #fff;
+}
+
+.form-control {
+  padding: 6px 12px;
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.alert-danger {
+  font-size: 13px;
+  color: #e68181;
+}
+
+.alert-warning {
+  font-size: 13px;
+  color: #e68181;
+}
+
+.alert-success {
+  font-size: 18px;
+  margin-top: 25px;
+  color: #fff;
+}
+
+.button {
+  font-size: 18px;
+  background-color: #ccd8db;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  padding: 12px 20px;
+}
+/*# sourceMappingURL=login.component.css.map */
