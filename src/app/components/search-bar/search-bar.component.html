@@ -9,10 +9,10 @@
         />
         <button (click)="search()" type="submit" class="search-button">Search</button>
         
-        <div class="navbar-not-logged-in">
-          <ul class="navbar-not-logged-in-ul" *ngIf="!isLoggedIn">
+        <div class="navbar-not-logged-in" *ngIf="!isLoggedIn">
+          <ul class="navbar-not-logged-in-ul">
                 <li class="navbar-not-logged-in-list">
-                  <a href="/about" class="navbar-not-logged-in-item"><b>About</b></a>
+                  <a href="/about" class="navbar-not-logged-in-item" routerLink="about"><b>About</b></a>
                 </li>
                 <li class="navbar-not-logged-in-list">
                   <a href="/register" class="navbar-not-logged-in-item" routerLink="register"><b>Sign Up</b></a>
@@ -22,12 +22,18 @@
                 </li>
           </ul>
         </div>
-
-        <ul class="navbar-logged-in" *ngIf="isLoggedIn">
+        
+        <div class="navbar-logged-in" *ngIf="isLoggedIn" >
+          <ul class="navbar-logged-in-ul">
                 <li class="navbar-logged-in-list">
-                  <a href="/about" class="navbar-logged-in-item"><b>About</b></a>
+                  <a href="/about" class="navbar-logged-in-item" routerLink="about"><b>About</b></a>
+                </li>
+                <li class="navbar-logged-in-list">
+                  <a href="/profile" class="navbar-logged-in-item" routerLink="profile"><b>Profile</b></a>
+                </li>
                 <li class="navbar-logged-in-list">
                   <a href class="navbar-logged-in-item" (click)="logout()"><b>LogOut</b></a>
                 </li>
-              </ul>
+          </ul>
+        </div>
 </div>  

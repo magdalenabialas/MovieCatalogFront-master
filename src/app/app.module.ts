@@ -24,6 +24,7 @@ import { ProfileComponent } from './components/profile/profile.component';
 
 import { authInterceptorProviders } from './helpers/auth.interceptor';
 import { RouterModule } from '@angular/router';
+import { AboutComponent } from './components/about/about.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +33,8 @@ import { RouterModule } from '@angular/router';
     DetailPageComponent,
     RegisterComponent,
     LoginComponent,
-    ProfileComponent
+    ProfileComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

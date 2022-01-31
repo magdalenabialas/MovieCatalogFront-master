@@ -75,7 +75,7 @@
 
 .navbar-not-logged-in {
   vertical-align: top;
-  width: 72%;
+  width: 1000%;
 }
 
 .navbar-not-logged-in-ul {
@@ -85,22 +85,22 @@
   float: right;
 }
 
+.navbar-not-logged-in-list {
+  display: inline-block;
+  width: auto;
+}
+
 .navbar-not-logged-in-item {
-  margin-right: 10px;
+  margin-right: 15px;
   color: #fff;
   cursor: pointer;
   text-decoration: none;
   font-family: "Arial", sans-serif;
 }
 
-.navbar-not-logged-in-list {
-  display: inline-block;
-  width: auto;
-}
-
 .navbar-logged-in {
   vertical-align: top;
-  width: 72%;
+  width: 150%;
 }
 
 .navbar-logged-in-ul {
@@ -111,7 +111,7 @@
 }
 
 .navbar-logged-in-item {
-  margin-right: 10px;
+  margin-right: 15px;
   color: #fff;
   cursor: pointer;
   text-decoration: none;

@@ -19,6 +19,5 @@ export class MovieHttpService {
     return this.http.get<Movie[]>(this.linkHttp + "/all");
 
   }
- // dobra zacznijmy od tego, moze to jednak glupie, ze nie wiem jak pobrac atrybuty filmu do templatki pagedetail, aby sie wyswietlalo dynamicznie
 }
  
