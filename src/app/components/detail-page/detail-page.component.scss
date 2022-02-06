@@ -73,3 +73,29 @@
     height: auto;
     padding: 10px 10px 10px 20px;
 }
+
+.rate-logged-in{
+    padding: 20px 20px 0 20px;
+    margin-bottom: 0;
+    font-size: 17px;
+    color:rgb(230, 201, 42);
+    line-height: 50px;
+}
+
+.rate-logged-in-stars{
+    padding: 0 0 0 20px;
+    margin-bottom: 0;
+    font-size: 35px;
+    color:rgb(230, 201, 42);
+    line-height: 50px;
+}
+
+.button{
+    font-size: 18px;
+    background-color: #bba319;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    padding: 12px 15px;
+    margin-left: 10px;
+}

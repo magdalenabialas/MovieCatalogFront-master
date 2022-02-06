@@ -5,7 +5,7 @@
         <div class="page-wrapper">
             <div class="page-movie-header">
                     <h1 class="page-movie-header-title">{{movie?.title}}</h1>
-                    <h2 class="page-movie-header-rate">&#11088;&nbsp;{{movie?.average_rate}}</h2>
+                    <h2 class="page-movie-header-rate">&#11088;&nbsp;{{movie?.average_rate | number : '1.0-1'}} </h2>
                     <h2 class="page-movie-header-genre">{{movie?.genres}}</h2>
             </div>
         </div>
@@ -15,6 +15,14 @@
 <div class="details-form">
     <mat-tab-group mat-align-tabs="start" backgroundColor="primary">
         <mat-tab label="Movie details">
+                <div class="rate-logged-in" *ngIf="isLoggedIn">
+                    Wanna rate the movie? Select number of stars and click "Save"<br><br>
+                </div>
+                <div class="rate-logged-in-stars" *ngIf="isLoggedIn">
+                    <ngb-rating [max]="10" [(ngModel)]="starRating" [readonly]="false"></ngb-rating>
+                    <p>{{starRating}}</p>
+                    <button class="button">Save</button>
+                </div>
                 <p class ="details-form-about-par">
                 <b>Description:</b> {{movie?.description}} <br><br>
                 <b>Director:</b> {{movie?.director}} <br> 

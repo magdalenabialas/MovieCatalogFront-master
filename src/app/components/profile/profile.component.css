@@ -2,21 +2,12 @@
   margin-left: auto;
   margin-right: auto;
   width: 8em;
-  margin-top: 35px;
   background: #400d81;
   width: 40%;
   height: 120%;
   text-align: center;
-}
-
-.profile-img-card {
-  border-radius: 50%;
-  width: 40%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 6px 12px;
-  margin-bottom: 30px;
+  padding: 20px 30px;
+  position: static;
 }
 
 .profile-form-details {
@@ -27,11 +18,47 @@
 }
 
 .profile-details {
-  font-size: 13px;
+  font-size: 14px;
   margin-bottom: 5px;
   margin-top: 5px;
   color: #fff;
   padding: 20px 30px;
   text-align: left;
+}
+
+.details-form-rate {
+  background: #28146e;
+  margin-left: auto;
+  margin-right: auto;
+  width: 8em;
+  color: #fff;
+  position: static;
+  margin-top: 30px;
+  left: 20%;
+  padding: 20px 55px;
+  font-size: 14px;
+  color: #fff;
+  width: 40%;
+  height: 30%;
+}
+
+.user-rates {
+  padding: 0 0 30px 0;
+}
+
+.loop-rates {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+}
+
+.loop-rates-cont1 {
+  padding: 20px 0 0 0;
 }
 /*# sourceMappingURL=profile.component.css.map */

@@ -25,6 +25,10 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { authInterceptorProviders } from './helpers/auth.interceptor';
 import { RouterModule } from '@angular/router';
 import { AboutComponent } from './components/about/about.component';
+import { NgxStarRatingModule } from 'ngx-star-rating';
+import { ReactiveFormsModule } from '@angular/forms';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,7 +53,10 @@ import { AboutComponent } from './components/about/about.component';
     MatSelectModule,
     MatTabsModule,
     MatIconModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    NgxStarRatingModule,
+    ReactiveFormsModule,
+    NgbModule
   ],
   providers: [authInterceptorProviders],
   bootstrap: [AppComponent]

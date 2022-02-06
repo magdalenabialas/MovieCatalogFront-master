@@ -30,7 +30,7 @@
     <p *ngIf="!movie.poster_path">No image</p>
     </div>
     <div class="movie-dsecription">
-      <p class="movie-average-rate">&#11088;&nbsp;{{movie.average_rate}}</p>
+      <p class="movie-average-rate">&#11088;&nbsp;{{movie.average_rate | number : '1.0-1'}} </p>
       <p class="movie-name">{{movie.title}}</p>
     </div>
   </div>

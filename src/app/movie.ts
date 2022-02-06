@@ -28,3 +28,8 @@ export interface MovieActor {
     nameActor?: string;
     charactername?: string;
 }
+
+export interface MoviesUsers {
+    rate?: number;
+    title?: string;
+}

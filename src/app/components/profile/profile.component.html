@@ -13,15 +13,21 @@
         <strong>Email:</strong>
         {{ currentUser.email }}
       </p>
-      <p>
-        <strong>Token:</strong>
-        {{ currentUser.accessToken.substring(0, 20) }} ...
-        {{ currentUser.accessToken.substr(currentUser.accessToken.length - 20) }}
-      </p>
+    </div>
+</div>
+
+  <div class="details-form-rate">
+    <p class="user-rates">
+      <b>Your rates:</b><br> 
+    </p>
+    <div class *ngFor="let rate of rates">
+      <div class="loop-rates">
+              <p class="loop-rates-cont1"><b>Movie title:</b>  "{{rate.title}}"</p>
+              <p class ="loop-rates-cont2"><b>Your rate:</b>  {{rate.rate}}<br></p>
+      </div> 
     </div>
   </div>
   
-  
   <ng-template #loggedOut>
     Please login.
-  </ng-template>)
+  </ng-template>
