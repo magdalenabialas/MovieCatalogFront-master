@@ -1,4 +1,4 @@
-(<div class="profile-form" *ngIf="currentUser; else loggedOut">
+<div class="profile-form" *ngIf="currentUser; else loggedOut">
     <header class="profile-form-details">
       <h3>
         <strong>Profile details</strong> 
@@ -14,9 +14,16 @@
         {{ currentUser.email }}
       </p>
     </div>
+
+    <div class="recommendation-form" *ngIf="recco_message">
+      <p class="loop-rates-cont1">Loooooooooooooool {{idmoviereko1}} {{idmoviereko2}}</p>
+  </div>
 </div>
 
   <div class="details-form-rate">
+    <div class="number-of-rates" *ngIf="!recco_message">
+      Please rate at least 3 movies to get from us some movie reccomendations!
+    </div>
     <p class="user-rates">
       <b>Your rates:</b><br> 
     </p>

@@ -20,7 +20,6 @@
                 </div>
                 <div class="rate-logged-in-stars" *ngIf="isLoggedIn">
                     <ngb-rating [max]="10" [(ngModel)]="starRating" [readonly]="false"></ngb-rating>
-                    <p>{{starRating}}</p>
                     <button class="button">Save</button>
                 </div>
                 <p class ="details-form-about-par">
