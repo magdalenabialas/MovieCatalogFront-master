@@ -1,12 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { TokenStorageService } from 'src/app/services/token-storage.service';
 import { MoviesusersHttpService } from 'src/app/services/http/moviesusers-http.service';
-import { MoviesUsers } from 'src/app/movie';
+import { Movie, MoviesUsers } from 'src/app/movie';
+import { MovieHttpService } from 'src/app/services/http/movie-http.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
-  styleUrls: ['./profile.component.scss']
+  styleUrls: ['./profile.component.scss'],
 })
 export class ProfileComponent implements OnInit {
   currentUser: any;
@@ -16,32 +18,44 @@ export class ProfileComponent implements OnInit {
   public recco_message: any = false;
   public idmoviereko1: number = 0;
   public idmoviereko2: number = 0;
+  movies: Movie[] = [];
 
   constructor(
     private token: TokenStorageService,
-    private MoviesusersHttpService: MoviesusersHttpService) { }
+    private MoviesusersHttpService: MoviesusersHttpService,
+    private movieHttpService: MovieHttpService,
+    private route: ActivatedRoute
+  ) {}
 
   ngOnInit(): void {
     this.currentUser = this.token.getUser();
-    this.iduser = this.token.getUser().id
+    this.iduser = this.token.getUser().id;
     this.idmoviereko1 = this.token.getUser().reccoMovie1;
     this.idmoviereko2 = this.token.getUser().reccoMovie2;
     this.getMovieUsersById(this.iduser);
+    this.getReccommendMovie(this.idmoviereko1);
+    this.getReccommendMovie(this.idmoviereko2);
   }
 
-    public getMovieUsersById(value: number) {
-    this.MoviesusersHttpService.getMoviesUsersById(this.iduser).subscribe((s) => {
-      s.forEach((src) => {
-        this.rates.push({
-          rate: src.rate,
-          title: src.movie.title
+  public getMovieUsersById(value: number) {
+    this.MoviesusersHttpService.getMoviesUsersById(this.iduser).subscribe(
+      (s) => {
+        s.forEach((src) => {
+          this.rates.push({
+            rate: src.rate,
+            title: src.movie.title,
+          });
         });
-      });
 
-      if(this.rates.length >= 1)
-      {
-        this.recco_message = true;
+        if (this.rates.length >= 3) {
+          this.recco_message = true;
+        }
       }
+    );
+  }
+  getReccommendMovie(id: number) {
+    this.movieHttpService.getMoviesById(id).subscribe((src) => {
+      this.movies.push(src);
     });
   }
 }

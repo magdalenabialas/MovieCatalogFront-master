@@ -90,6 +90,7 @@
   font-size: 35px;
   color: #e6c92a;
   line-height: 50px;
+  margin-top: -40px;
 }
 
 .button {
@@ -100,5 +101,14 @@
   text-decoration: none;
   padding: 12px 15px;
   margin-left: 10px;
+  cursor: pointer;
+}
+
+.after-rating {
+  padding: 0 0 0 20px;
+  margin-bottom: 0;
+  font-size: 15px;
+  color: #e68181;
+  line-height: 50px;
 }
 /*# sourceMappingURL=detail-page.component.css.map */

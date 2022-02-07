@@ -88,6 +88,7 @@
     font-size: 35px;
     color:rgb(230, 201, 42);
     line-height: 50px;
+    margin-top: -40px;
 }
 
 .button{
@@ -98,4 +99,13 @@
     text-decoration: none;
     padding: 12px 15px;
     margin-left: 10px;
+    cursor: pointer;
+}
+
+.after-rating{
+    padding: 0 0 0 20px;
+    margin-bottom: 0;
+    font-size: 15px;
+    color:rgb(230, 129, 129);
+    line-height: 50px;
 }

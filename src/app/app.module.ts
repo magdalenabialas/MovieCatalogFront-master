@@ -28,6 +28,7 @@ import { AboutComponent } from './components/about/about.component';
 import { NgxStarRatingModule } from 'ngx-star-rating';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { AuthGuard } from './_guards/auth.guard';
 
 @NgModule({
   declarations: [
@@ -58,7 +59,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     ReactiveFormsModule,
     NgbModule
   ],
-  providers: [authInterceptorProviders],
+  providers: [AuthGuard,authInterceptorProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

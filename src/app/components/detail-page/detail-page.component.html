@@ -15,12 +15,15 @@
 <div class="details-form">
     <mat-tab-group mat-align-tabs="start" backgroundColor="primary">
         <mat-tab label="Movie details">
-                <div class="rate-logged-in" *ngIf="isLoggedIn">
+                <div class="rate-logged-in" *ngIf="isLoggedIn && !isRated">
                     Wanna rate the movie? Select number of stars and click "Save"<br><br>
                 </div>
-                <div class="rate-logged-in-stars" *ngIf="isLoggedIn">
+                <div class="rate-logged-in-stars" *ngIf="isLoggedIn && !isRated">
                     <ngb-rating [max]="10" [(ngModel)]="starRating" [readonly]="false"></ngb-rating>
-                    <button class="button">Save</button>
+                    <button class="button" (click)="saveRate()">Save</button>
+                </div>
+                <div class="after-rating" *ngIf="showThanks">
+                    Thanks for your rate! You can check your rates on the User's profile.
                 </div>
                 <p class ="details-form-about-par">
                 <b>Description:</b> {{movie?.description}} <br><br>

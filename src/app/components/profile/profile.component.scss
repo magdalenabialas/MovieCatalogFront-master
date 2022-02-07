@@ -58,3 +58,32 @@
     .loop-rates-cont1{
         padding: 20px 0 0 0;
     }
+
+    .recommendation-form {
+        font-size: 24px;
+        margin-bottom: 5px;
+        margin-top: -218px;
+        color: rgb(230, 129, 129);
+        padding: 20px 30px;
+        text-align: center;
+        margin-left: 40%;
+        width: 8em;
+        background:rgb(40, 20, 110);
+        width: 20%;
+        height: 75%;
+        padding: 20px 30px;
+        position:absolute;
+        
+    }
+      
+    .recco-title{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        text-align: center;
+        color:#fff;
+    }
+
+    .recco-image{
+        cursor: pointer;
+        transform: translateY(-3px);
+    }

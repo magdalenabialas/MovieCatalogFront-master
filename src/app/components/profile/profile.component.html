@@ -16,11 +16,19 @@
     </div>
 
     <div class="recommendation-form" *ngIf="recco_message">
-      <p class="loop-rates-cont1">Loooooooooooooool {{idmoviereko1}} {{idmoviereko2}}</p>
+      <b>You may also like:</b>
+      <div class="loop-rates-cont1">
+        <div *ngFor="let movie of movies">
+              <p class="recco-title"><b>{{movie.title}}</b></p>
+        <div class="recco-image" [routerLink]="'../movie/' + movie.idmovie">  
+          <img [src]="movie.poster_path" width="50%" height="50%">
+        </div>  
+      </div>
+    </div>
   </div>
 </div>
 
-  <div class="details-form-rate">
+  <div class="details-form-rate" >
     <div class="number-of-rates" *ngIf="!recco_message">
       Please rate at least 3 movies to get from us some movie reccomendations!
     </div>
