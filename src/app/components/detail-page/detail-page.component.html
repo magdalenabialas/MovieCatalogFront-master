@@ -18,6 +18,10 @@
                 <div class="rate-logged-in" *ngIf="isLoggedIn && !isRated">
                     Wanna rate the movie? Select number of stars and click "Save"<br><br>
                 </div>
+                <div class="rate-logged-in-rated" *ngIf="isLoggedIn && isRated">
+                    This movie has been already rated! Check the details on the User's profile.<br><br>
+                </div>
+
                 <div class="rate-logged-in-stars" *ngIf="isLoggedIn && !isRated">
                     <ngb-rating [max]="10" [(ngModel)]="starRating" [readonly]="false"></ngb-rating>
                     <button class="button" (click)="saveRate()">Save</button>
