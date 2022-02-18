@@ -26,9 +26,6 @@
                     <ngb-rating [max]="10" [(ngModel)]="starRating" [readonly]="false"></ngb-rating>
                     <button class="button" (click)="saveRate()">Save</button>
                 </div>
-                <div class="after-rating" *ngIf="showThanks">
-                    Thanks for your rate! You can check your rates on the User's profile.
-                </div>
                 <p class ="details-form-about-par">
                 <b>Description:</b> {{movie?.description}} <br><br>
                 <b>Director:</b> {{movie?.director}} <br> 
