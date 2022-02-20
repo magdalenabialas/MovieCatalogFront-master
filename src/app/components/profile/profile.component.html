@@ -1,48 +1,48 @@
 <div class="profile-form" *ngIf="currentUser; else loggedOut">
-    <header class="profile-form-details">
-      <h3>
-        <strong>Profile details</strong> 
-      </h3>
-    </header>
-    <div class="profile-details">
-      <p>
-        <strong>Username:</strong>
-        {{ currentUser.username }}
-      </p>
-      <p>
-        <strong>Email:</strong>
-        {{ currentUser.email }}
-      </p>
-    </div>
+  <header class="profile-form-details">
+    <h3>
+      <strong>Profile details</strong>
+    </h3>
+  </header>
+  <div class="profile-details">
+    <p>
+      <strong>Username:</strong>
+      {{ currentUser.username }}
+    </p>
+    <p>
+      <strong>Email:</strong>
+      {{ currentUser.email }}
+    </p>
+  </div>
 
-    <div class="recommendation-form" *ngIf="recco_message" >
-      <b>You may also like:</b>
-      <div class="loop-rates-cont1">
-        <div *ngFor="let movie of movies">
-              <p class="recco-title"><b>{{movie.title}}</b></p>
-        <div class="recco-image" [routerLink]="'../movie/' + movie.idmovie">  
-          <img [src]="movie.poster_path" width="50%" height="50%">
-        </div>  
-      </div>
+  <div class="recommendation-form" *ngIf="recco_message && findAnyInRatedMovies()">
+    <b>You may also like:</b>
+    <div class="loop-rates-cont1">
+      <ng-container *ngFor="let movie of movies">
+        <div *ngIf="findInRatedMovies(movie)">
+          <p class="recco-title">
+            <b>{{ movie.title }}</b>
+          </p>
+          <div class="recco-image" [routerLink]="'../movie/' + movie.idmovie">
+            <img [src]="movie.poster_path" width="50%" height="50%" />
+          </div>
+        </div>
+      </ng-container>
     </div>
   </div>
 </div>
 
-  <div class="details-form-rate" >
-    <div class="number-of-rates" *ngIf="!recco_message">
-      Please rate at least 3 movies to get from us some movie reccomendations!
-    </div>
-    <p class="user-rates">
-      <b>Your rates:</b><br> 
-    </p>
-    <div class *ngFor="let rate of rates">
-      <div class="loop-rates">
-              <p class="loop-rates-cont1"><b>Movie title:</b>  "{{rate.title}}"</p>
-              <p class ="loop-rates-cont2"><b>Your rate:</b>  {{rate.rate}}<br></p>
-      </div> 
+<div class="details-form-rate">
+  <div class="number-of-rates" *ngIf="!recco_message">
+    Please rate at least 3 movies to get from us some movie reccomendations!
+  </div>
+  <p class="user-rates"><b>Your rates:</b><br /></p>
+  <div class *ngFor="let rate of rates">
+    <div class="loop-rates">
+      <p class="loop-rates-cont1"><b>Movie title:</b> "{{ rate.title }}"</p>
+      <p class="loop-rates-cont2"><b>Your rate:</b> {{ rate.rate }}<br /></p>
     </div>
   </div>
-  
-  <ng-template #loggedOut>
-    Please login.
-  </ng-template>
+</div>
+
+<ng-template #loggedOut> Please login. </ng-template>

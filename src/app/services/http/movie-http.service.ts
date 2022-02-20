@@ -11,10 +11,6 @@ export class MovieHttpService {
 
   constructor(private http: HttpClient) {}
 
-  public getAll(params: any): Observable<any> {
-    return this.http.get<any>(this.linkHttp, { params });
-  }
-
   public getMovies(): Observable<Movie[]> {
     return this.http.get<Movie[]>(this.linkHttp + '/all');
   }
@@ -23,11 +19,8 @@ export class MovieHttpService {
     return this.http.get<Movie>(this.linkHttp + '/findidmovie/' + idmovie);
   }
 
-  update(idMovie: number, rate: number): Observable<any> {
-    const params = new HttpParams();
-    params.set('id', idMovie);
-    params.set('rate', rate);
-
-    return this.http.get<any>(this.linkHttp + `/update/${idMovie}/${rate}`);
+  public update(idMovie: number, rate: number): Observable<any> {
+  
+    return this.http.put<any>(this.linkHttp + `/update/${idMovie}/${rate}`, undefined);
   }
 }

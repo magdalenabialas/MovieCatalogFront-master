@@ -32,4 +32,5 @@ export interface MovieActor {
 export interface MoviesUsers {
     rate?: number;
     title?: string;
+    idmovie: number
 }

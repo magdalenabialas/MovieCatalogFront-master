@@ -19,7 +19,7 @@ export class MoviesusersHttpService {
   addRate(idMovie: number, rate: number): Observable<any> {
     const userId = this.token.getUser().id;
 
-    return this.httpClient.post<any>(this.linkHttp + 'add', {
+    return this.httpClient.post<any>(this.linkHttp + 'add/rate', {
       rate: rate,
       iduser: userId,
       idmovie: idMovie,

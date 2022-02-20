@@ -1,5 +1,5 @@
 <div class="search-container">
-        <span class="logo" routerLink="movies" (click)="reset()">MYmovieAPP</span>
+        <span class="logo" routerLink="/movies" (click)="reset()">MYmovieAPP</span>
         <input
         class="search-input"
         type="text"
@@ -12,10 +12,10 @@
         <div class="navbar-not-logged-in" *ngIf="!isLoggedIn">
           <ul class="navbar-not-logged-in-ul">
                 <li class="navbar-not-logged-in-list">
-                  <a href="./about" class="navbar-not-logged-in-item" routerLink="/about"><b>About</b></a>
+                  <a href="/about" class="navbar-not-logged-in-item" routerLink="/about"><b>About</b></a>
                 </li>
                 <li class="navbar-not-logged-in-list">
-                  <a href="/register" class="navbar-not-logged-in-item" routerLink="/register"><b>Sign Up</b></a>
+                  <a href="/register" class="navbar-not-logged-in-item" routerLink="/register"><b>SignUp</b></a>
                 </li>
                 <li class="navbar-not-logged-in-list">
                   <a href="/login" class="navbar-not-logged-in-item" routerLink="/login"><b>Login</b></a>

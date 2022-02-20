@@ -37,6 +37,14 @@ export class ProfileComponent implements OnInit {
     this.getReccommendMovie(this.idmoviereko2);
   }
 
+  findInRatedMovies(movie: Movie): boolean {
+    return !this.rates.some(({idmovie}) => idmovie === movie.idmovie)
+  }
+  findAnyInRatedMovies(): boolean {
+    return this.movies.some(movie => this.findInRatedMovies(movie))
+  }
+  
+
   public getMovieUsersById(value: number) {
     this.MoviesusersHttpService.getMoviesUsersById(this.iduser).subscribe(
       (s) => {
@@ -44,6 +52,7 @@ export class ProfileComponent implements OnInit {
           this.rates.push({
             rate: src.rate,
             title: src.movie.title,
+            idmovie: src.movie.idmovie
           });
         });
 
