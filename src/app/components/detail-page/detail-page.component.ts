@@ -49,7 +49,6 @@ export class DetailPageComponent implements OnInit {
     }
   }
 
-  /** Funkcja wyświetlająca obsadę danego filmu to przestało dziala*/
   public getMovieActorsById(value: number) {
     this.actorHttpService.getMovieActorsById(this.idmovie).subscribe((s) => {
       s.forEach((src) => {

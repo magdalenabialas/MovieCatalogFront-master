@@ -1,4 +1,3 @@
-import { ActorsHttpService } from './services/http/actors-http.service';
 import { Component, OnInit } from '@angular/core';
 
 
@@ -10,9 +9,6 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit{
 
 
-/**
- *
- */
 constructor() {
 
 }

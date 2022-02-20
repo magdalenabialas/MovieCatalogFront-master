@@ -1,7 +1,6 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { filter } from 'rxjs/internal/operators/filter';
+import { ActivatedRoute } from '@angular/router';;
 import { Movie } from 'src/app/movie';
 import { MovieHttpService } from 'src/app/services/http/movie-http.service';
 

@@ -2,8 +2,7 @@ import { Movie } from '../../movie';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { environment } from 'src/environments/environment';
-import { TokenStorageService } from '../token-storage.service';
+
 
 @Injectable({ providedIn: 'root' })
 export class MovieHttpService {
